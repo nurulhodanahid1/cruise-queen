@@ -77,6 +77,11 @@ function calculateTotal(){
 
 document.getElementById('book-now').addEventListener("click", function(){
     document.getElementById('form-confirmation').style.display = 'block';
+    document.getElementById('sub-total').innerText = '$' + 00;
+    document.getElementById('tax-amount').innerText = '$' + 00;
+    document.getElementById('total-amount').innerText = '$' + 00;
+    document.getElementById('first-class-count').value = 0;
+    document.getElementById('economy-count').value= 0;
     document.getElementById('order-form').style.display = 'none';
 })
 document.getElementById('book-again').addEventListener("click", function(){
