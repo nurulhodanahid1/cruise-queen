@@ -56,7 +56,8 @@ nav ul li a:hover, a.active{
     font-family: 'Bebas Neue', cursive;
     font-weight: 500;
 }
-.booking-form{
+.booking-form,
+.thanks-form{
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 10px;
@@ -121,4 +122,13 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+#first-class-increase:hover,
+#first-class-decrease:hover,
+#economy-increase:hover,
+#economy-decrease:hover{
+    cursor: pointer;
+    border: 1px solid #3352F2;
+    border-radius: 5px;
+    padding: 0 8px;
 }

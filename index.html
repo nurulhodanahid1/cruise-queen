@@ -26,9 +26,10 @@
         </nav>
     </header>
 
+    
+
     <!--Booking Section-->
     <main class="main-content container">
-
         <div class="booking-content">
             <h1>Cruise Queen</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
@@ -36,10 +37,11 @@
 
 
         <div class="booking-form">
-            <h3>Book Ocean Time</h3>
+            <div id="order-form">
+                <h3>Book Ocean Time</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
@@ -58,20 +60,20 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="first-class-count" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <p> <span id="first-class-increase">+</span> <span id="first-class-decrease">-</span> </p>
                 </div>
             </div>
             
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="economy-count" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                    <p> <span onclick="handleTicketBook('economy', true)" id="economy-increase">+</span> <span onclick="handleTicketBook('economy', false)" id="economy-decrease">-</span> </p>
                 </div>
             </div>
             <div class="calculations">
@@ -80,7 +82,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p id="sub-total">$00</p>
                     </div>
                 </div>
 
@@ -89,7 +91,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="tax-amount">$00</p>
                     </div>
                 </div>
                 <hr>
@@ -98,15 +100,23 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p id="total-amount">00</p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="book-now" style="cursor: pointer;" class="btn-style">Book Now</button>
+            </div>
+
+            <div id="form-confirmation">
+                <h2 style="color: #00CC6A;">Thank you so much for your book</h2>
+                <p>your first class ticket: <span id="first-class-ticket-number"></span></p>
+                <p>your economy ticket: <span id="economy-ticket-number"></span></p>
+                <button id="book-again" style="cursor: pointer;" class="btn-style">Book again</button>
+            </div>
         </div>
     </main>
-
     <!--Thank You-->
+    <script src="script.js"></script>
 </body>
 
 </html>
